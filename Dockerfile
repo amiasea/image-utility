@@ -1,5 +1,7 @@
 FROM mcr.microsoft.com/powershell:7.5-ubuntu-24.04
 
+LABEL org.opencontainers.image.source="https://github.com/amiasea/image-utility"
+
 RUN pwsh -NoLogo -NoProfile -NonInteractive -Command \
     '$ErrorActionPreference = "Stop"; \
      Install-Module Az.Accounts -Repository PSGallery -Scope AllUsers -Force -AllowClobber; \
